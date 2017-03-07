@@ -1,0 +1,28 @@
+<html>
+<head>
+<title>Mouse_roller build log</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
+<body>
+<tt>
+Build started on: <u>26-11-2015 at 09:37.33</u><br />
+Build ended on: <u>26-11-2015 at 09:37.34</u><p />
+<b>-------------- Build: Arduino Mega 2560/ADK in Mouse_roller (compiler: GNU AVR GCC Compiler)---------------</b><br />
+avr-g++ -DARDUINO=101 -fno-exceptions -ffunction-sections -fdata-sections -x c++ -s -DUSE_EEPROM=0 -DUSE_ETHERNET=0 -DUSE_FIRMATA=0 -DUSE_LCD=0 -DUSE_LCD4884=0 -DUSE_OBD=0 -DUSE_SD=0 -DUSE_SERVO=0 -DUSE_SOFTSERIAL=0 -DUSE_SPI=0 -DUSE_STEPPER=0 -DUSE_TINYGPS=0 -DUSE_WIRE=0 -Wall -O2 -mmcu=atmega2560 -D__AVR_ATmega2560__ -DF_CPU=16000000L -DCODE_BLOCKS -g -I. -I/home/pablo/.config/codeblocks/arduino/libraries/EEPROM -I/home/pablo/.config/codeblocks/arduino/libraries/Ethernet -I/home/pablo/.config/codeblocks/arduino/libraries/Firmata -I/home/pablo/.config/codeblocks/arduino/libraries/Flash -I/home/pablo/.config/codeblocks/arduino/libraries/LCD4884 -I/home/pablo/.config/codeblocks/arduino/libraries/LCD4Bit_mod -I/home/pablo/.config/codeblocks/arduino/libraries/LiquidCrystal -I/home/pablo/.config/codeblocks/arduino/libraries/SD -I/home/pablo/.config/codeblocks/arduino/libraries/SD/utility -I/home/pablo/.config/codeblocks/arduino/libraries/Servo -I/home/pablo/.config/codeblocks/arduino/libraries/SevenSegment -I/home/pablo/.config/codeblocks/arduino/libraries/SoftwareSerial -I/home/pablo/.config/codeblocks/arduino/libraries/SPI -I/home/pablo/.config/codeblocks/arduino/libraries/Stepper -I/home/pablo/.config/codeblocks/arduino/libraries/TinyGPS -I/home/pablo/.config/codeblocks/arduino/libraries/Wire -I/home/pablo/.config/codeblocks/arduino/libraries/Wire/utility -I/home/pablo/.config/codeblocks/arduino/hardware/arduino/cores/arduino -I/home/pablo/.config/codeblocks/arduino/libraries -I/home/pablo/.config/codeblocks/sketches/hardware/attiny/variants/mega -I/home/pablo/.config/codeblocks/arduino/hardware/arduino/variants/mega -I/home/pablo/.config/codeblocks/sketches/libraries -I/usr/lib/avr -c sketch.cpp -o .objs/sketch.o<br />
+<font color="#0000ff">sketch.cpp:32:12: warning: ‘pos’ defined but not used [-Wunused-variable]</font><br />
+ static int pos=0;<br />
+            ^<br />
+avr-g++ -L/usr/lib/avr -o bin/Release/Mouse_roller.elf .objs/cores/CDC.o .objs/cores/HardwareSerial.o .objs/cores/HID.o .objs/cores/IPAddress.o .objs/cores/main.o .objs/cores/new.o .objs/cores/Print.o .objs/cores/Stream.o .objs/cores/Tone.o .objs/cores/USBCore.o .objs/cores/WInterrupts.o .objs/cores/wiring.o .objs/cores/wiring_analog.o .objs/cores/wiring_digital.o .objs/cores/wiring_pulse.o .objs/cores/wiring_shift.o .objs/cores/WMath.o .objs/cores/WString.o .objs/libraries/libraries.o .objs/sketch.o  -Wl,--gc-sections -s -mmcu=atmega2560<br />
+Output file is bin/Release/Mouse_roller.elf with size 6.68 KB<br />
+avr-objcopy -O ihex -R .eeprom -R .eesafe bin/Release/Mouse_roller.elf bin/Release/Mouse_roller.elf.hex<br />
+avr-objcopy --no-change-warnings -j .eeprom --change-section-lma .eeprom=0 -O ihex bin/Release/Mouse_roller.elf bin/Release/Mouse_roller.elf.eep.hex<br />
+avr-size -A bin/Release/Mouse_roller.elf &gt;&gt; /home/pablo/.config/codeblocks/helpers/avrsize_dump.txt; python /home/pablo/.config/codeblocks/helpers/test_avr_size.py -f /home/pablo/.config/codeblocks/helpers/avrsize_dump.txt -m 258048 -s 8192<br />
+--------<br />
+Memory Details:<br />
+Binary sketch size: 6366 bytes (of 258048 bytes maximum); 2% used<br />
+SRAM size: 752 bytes (of 8192 bytes maximum); 9% used<br />
+-------<br />
+<font color="#0000ff">Process terminated with status 0 (0 minute(s), 1 second(s))</font><br />
+<font color="#0000ff">0 error(s), 1 warning(s) (0 minute(s), 1 second(s))</font><br />
+</tt>
+</body>
+</html>
