@@ -92,11 +92,11 @@ void serialEvent( Serial port ){
     ps_old = ps; //guarda la posición antigua.
     while(port.available() > 0){  //Lee todo lo que haya en el buffer
     inByte = port.readChar();
-    if( inByte == '+' ){  //Si es un '1' incrementa la posición
+    if( inByte == '+' ){  //Si es un '+' incrementa la posición
       ps++;
       pulse1++;
     }
-    else if(inByte == '-'){  //Si es un '2' decrementa la posición
+    else if(inByte == '-'){  //Si es un '-' decrementa la posición
      ps--;
      pulse2++;
     }
