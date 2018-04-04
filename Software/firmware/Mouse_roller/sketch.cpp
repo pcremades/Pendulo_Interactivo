@@ -39,11 +39,11 @@ void ISR_roller()
 {
 
   if(digitalRead(3) == digitalRead(2)){
-    Serial.print(1);
+    Serial.print(+);
     Serial.print('\r');
     }
   else{
-    Serial.print(2);
+    Serial.print(-);
     Serial.print('\r');
     }
 }
